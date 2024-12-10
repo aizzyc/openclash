@@ -1,0 +1,1462 @@
+---
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+unified-delay: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://doh.dns.sb/dns-query
+  - https://dns.cloudflare.com/dns-query
+  - https://dns.twnic.tw/dns-query
+  - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+proxies:
+- name: 极速666.com
+  type: trojan
+  server: hk14.jssssss.com
+  port: 25635
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 IEPL香港HKT1"
+  type: trojan
+  server: hkt.jssssss.com
+  port: 21051
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 IEPL香港HKT2"
+  type: vmess
+  server: hkt1.jssssss.com
+  port: 22020
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1ED\U0001F1F0 IEPL香港HKB"
+  type: ss
+  server: hk13.jssssss.com
+  port: 41551
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港_A1"
+  type: ss
+  server: hka1.jssssss.com
+  port: 34021
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_A2"
+  type: trojan
+  server: hka22.jssssss.com
+  port: 34022
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_A3"
+  type: trojan
+  server: hka3.jssssss.com
+  port: 54513
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_A4"
+  type: trojan
+  server: hka4.jssssss.com
+  port: 34004
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_A5"
+  type: ss
+  server: hka5.jssssss.com
+  port: 34025
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港_B1"
+  type: ss
+  server: bgp1.jssssss.com
+  port: 34011
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_B2"
+  type: trojan
+  server: bgp2.jssssss.com
+  port: 34012
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_B3"
+  type: ss
+  server: bgp3.jssssss.com
+  port: 34013
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_B4"
+  type: trojan
+  server: bgp4.jssssss.com
+  port: 34014
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_B5"
+  type: trojan
+  server: bgp5.jssssss.com
+  port: 34015
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 香港_01"
+  type: ss
+  server: hk01.jssssss.com
+  port: 21510
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_02"
+  type: trojan
+  server: hk02.jssssss.com
+  port: 20511
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 香港_03"
+  type: vmess
+  server: hk03.jssssss.com
+  port: 44552
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1ED\U0001F1F0 IEPL香港-04"
+  type: trojan
+  server: hk04.jssssss.com
+  port: 45465
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 香港-05"
+  type: ss
+  server: hk05.jssssss.com
+  port: 41217
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 IEPL香港-06"
+  type: trojan
+  server: hk06.jssssss.com
+  port: 22074
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 香港-07"
+  type: ss
+  server: hk07.jssssss.com
+  port: 44302
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 IEPL香港-08"
+  type: trojan
+  server: hk16.jssssss.com
+  port: 53252
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1ED\U0001F1F0 香港_09"
+  type: vmess
+  server: hk18.jssssss.com
+  port: 51254
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1ED\U0001F1F0 IEPL香港_10"
+  type: trojan
+  server: hk19.jssssss.com
+  port: 53255
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-01"
+  type: ss
+  server: jp01.jssssss.com
+  port: 35207
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 IEPL日本-02"
+  type: trojan
+  server: jp02.jssssss.com
+  port: 30206
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-03"
+  type: ss
+  server: jp03.jssssss.com
+  port: 35205
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 IEPL日本-04"
+  type: trojan
+  server: jp04.jssssss.com
+  port: 30204
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-05"
+  type: ss
+  server: jp05.jssssss.com
+  port: 35203
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 IEPL日本-06"
+  type: trojan
+  server: jp06.jssssss.com
+  port: 30202
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-07"
+  type: vmess
+  server: jp07.jssssss.com
+  port: 30201
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1EF\U0001F1F5 IEPL日本-08"
+  type: trojan
+  server: jp08.jssssss.com
+  port: 30005
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-09"
+  type: vmess
+  server: jp09.jssssss.com
+  port: 30004
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1EF\U0001F1F5 IEPL日本-10"
+  type: trojan
+  server: jp10.jssssss.com
+  port: 30003
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-11"
+  type: vmess
+  server: jp11.jssssss.com
+  port: 30004
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1EF\U0001F1F5 IEPL日本-12"
+  type: trojan
+  server: jp12.jssssss.com
+  port: 30501
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-13"
+  type: ss
+  server: jp13.jssssss.com
+  port: 30502
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 IEPL日本-14"
+  type: trojan
+  server: jp14.jssssss.com
+  port: 39204
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EF\U0001F1F5 日本-15"
+  type: ss
+  server: jp15.jssssss.com
+  port: 39505
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡-1"
+  type: ss
+  server: sg01.jssssss.com
+  port: 45517
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F8\U0001F1EC IEPL新加坡-2"
+  type: trojan
+  server: sg02.jssssss.com
+  port: 45519
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F8\U0001F1EC 新加坡-3"
+  type: ss
+  server: sg03.jssssss.com
+  port: 35902
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F8\U0001F1EC IEPL新加坡-4"
+  type: trojan
+  server: sg04.jssssss.com
+  port: 40520
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F8\U0001F1EC 新加坡-5"
+  type: ss
+  server: sg05.jssssss.com
+  port: 45005
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F8\U0001F1EC IEPL新加坡-6"
+  type: trojan
+  server: sg06.jssssss.com
+  port: 45570
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F8\U0001F1EC 新加坡-7"
+  type: vmess
+  server: sg07.jssssss.com
+  port: 45071
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1F8\U0001F1EC IEPL新加坡-8"
+  type: trojan
+  server: sg08.jssssss.com
+  port: 45072
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F8\U0001F1EC 新加坡-9"
+  type: vmess
+  server: sg09.jssssss.com
+  port: 45073
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1F8\U0001F1EC IEPL新加坡-10"
+  type: trojan
+  server: sg10.jssssss.com
+  port: 45074
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F8\U0001F1EC 新加坡-11"
+  type: vmess
+  server: sg11.jssssss.com
+  port: 45075
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1F8\U0001F1EC IEPL新加坡-12"
+  type: trojan
+  server: sg12.jssssss.com
+  port: 45076
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F8\U0001F1EC 新加坡-13"
+  type: ss
+  server: sg13.jssssss.com
+  port: 45177
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F8\U0001F1EC IEPL新加坡-14"
+  type: trojan
+  server: sg14.jssssss.com
+  port: 45078
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F8\U0001F1EC 新加坡-15"
+  type: ss
+  server: sg15.jssssss.com
+  port: 45179
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国-01"
+  type: ss
+  server: us01.jssssss.com
+  port: 40752
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 IEPL美国-02"
+  type: trojan
+  server: us02.jssssss.com
+  port: 40393
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1FA\U0001F1F8 美国-03"
+  type: ss
+  server: us03.jssssss.com
+  port: 42554
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 IEPL美国-04"
+  type: trojan
+  server: us04.jssssss.com
+  port: 40703
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1FA\U0001F1F8 美国-05"
+  type: vmess
+  server: us05.jssssss.com
+  port: 40601
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: "\U0001F1F9\U0001F1FC 台湾-1"
+  type: ss
+  server: tw01.jssssss.com
+  port: 23701
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F9\U0001F1FC IEPL台湾-2"
+  type: trojan
+  server: tw02.jssssss.com
+  port: 20702
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F9\U0001F1FC 台湾-3"
+  type: ss
+  server: tw03.jssssss.com
+  port: 33401
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F9\U0001F1FC IEPL台湾-4"
+  type: trojan
+  server: tw04.jssssss.com
+  port: 30499
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F0\U0001F1F7 韩国-01"
+  type: trojan
+  server: kr01.jssssss.com
+  port: 48705
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F0\U0001F1F7 韩国-02"
+  type: trojan
+  server: kr02.jssssss.com
+  port: 48702
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F0\U0001F1F7 韩国-03"
+  type: trojan
+  server: kr03.jssssss.com
+  port: 48505
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EE\U0001F1F3 印度-2"
+  type: ss
+  server: in02.jssssss.com
+  port: 44856
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F2\U0001F1FE 马来西亚"
+  type: ss
+  server: my01.jssssss.com
+  port: 45720
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F3\U0001F1F1 荷兰"
+  type: ss
+  server: nl01.jssssss.com
+  port: 30012
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EC\U0001F1E7 英国"
+  type: ss
+  server: gb01.jssssss.com
+  port: 45712
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EA\U0001F1F8 西班牙"
+  type: ss
+  server: es01.jssssss.com
+  port: 40523
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F5\U0001F1ED 菲律宾"
+  type: ss
+  server: ph01.jssssss.com
+  port: 19190
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1E6\U0001F1F7 阿根廷"
+  type: ss
+  server: ar01.jssssss.com
+  port: 45715
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F9\U0001F1F7 土耳其"
+  type: ss
+  server: tr01.jssssss.com
+  port: 43719
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1FB\U0001F1F3 越南"
+  type: ss
+  server: vn01.jssssss.com
+  port: 40511
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1FA\U0001F1E6 乌克兰"
+  type: ss
+  server: ua01.jssssss.com
+  port: 45722
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F7\U0001F1FA 俄罗斯"
+  type: ss
+  server: ru01.jssssss.com
+  port: 42721
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EB\U0001F1F7 法国"
+  type: ss
+  server: fr01.jssssss.com
+  port: 45713
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1E9\U0001F1EA 德国"
+  type: ss
+  server: de01.jssssss.com
+  port: 34177
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EE\U0001F1F9 意大利"
+  type: ss
+  server: it01.jssssss.com
+  port: 15004
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1F9\U0001F1ED 泰国"
+  type: ss
+  server: th01.jssssss.com
+  port: 45709
+  cipher: chacha20-ietf-poly1305
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+- name: "\U0001F1EE\U0001F1F3 印度-1"
+  type: trojan
+  server: in01.jssssss.com
+  port: 25538
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1E6\U0001F1EA 迪拜"
+  type: trojan
+  server: ae01.jssssss.com
+  port: 40708
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1E6\U0001F1FA 澳大利亚"
+  type: trojan
+  server: au01.jssssss.com
+  port: 30303
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EE\U0001F1E9 印度尼西亚"
+  type: trojan
+  server: id01.jssssss.com
+  port: 40710
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1EE\U0001F1EA 爱尔兰"
+  type: trojan
+  server: ie01.jssssss.com
+  port: 25051
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1F2\U0001F1FD 墨西哥"
+  type: trojan
+  server: mx01.jssssss.com
+  port: 35661
+  password: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  udp: true
+  sni: jsygouer.weixin-baidu-qq.com
+- name: "\U0001F1E8\U0001F1E6 加拿大"
+  type: vmess
+  server: ca01.jssssss.com
+  port: 40717
+  uuid: e7021f34-2f4f-4bab-b8a4-040e800a0703
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+proxy-groups:
+- name: 极速云
+  type: select
+  proxies:
+  - 自动选择
+  - 故障转移
+  - 极速666.com
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKT1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKT2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKB"
+  - "\U0001F1ED\U0001F1F0 香港_A1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A3"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A4"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A5"
+  - "\U0001F1ED\U0001F1F0 香港_B1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B3"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B4"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B5"
+  - "\U0001F1ED\U0001F1F0 香港_01"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_02"
+  - "\U0001F1ED\U0001F1F0 香港_03"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-04"
+  - "\U0001F1ED\U0001F1F0 香港-05"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-06"
+  - "\U0001F1ED\U0001F1F0 香港-07"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-08"
+  - "\U0001F1ED\U0001F1F0 香港_09"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_10"
+  - "\U0001F1EF\U0001F1F5 日本-01"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-02"
+  - "\U0001F1EF\U0001F1F5 日本-03"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-04"
+  - "\U0001F1EF\U0001F1F5 日本-05"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-06"
+  - "\U0001F1EF\U0001F1F5 日本-07"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-08"
+  - "\U0001F1EF\U0001F1F5 日本-09"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-10"
+  - "\U0001F1EF\U0001F1F5 日本-11"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-12"
+  - "\U0001F1EF\U0001F1F5 日本-13"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-14"
+  - "\U0001F1EF\U0001F1F5 日本-15"
+  - "\U0001F1F8\U0001F1EC 新加坡-1"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-2"
+  - "\U0001F1F8\U0001F1EC 新加坡-3"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-4"
+  - "\U0001F1F8\U0001F1EC 新加坡-5"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-6"
+  - "\U0001F1F8\U0001F1EC 新加坡-7"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-8"
+  - "\U0001F1F8\U0001F1EC 新加坡-9"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-10"
+  - "\U0001F1F8\U0001F1EC 新加坡-11"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-12"
+  - "\U0001F1F8\U0001F1EC 新加坡-13"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-14"
+  - "\U0001F1F8\U0001F1EC 新加坡-15"
+  - "\U0001F1FA\U0001F1F8 美国-01"
+  - "\U0001F1FA\U0001F1F8 IEPL美国-02"
+  - "\U0001F1FA\U0001F1F8 美国-03"
+  - "\U0001F1FA\U0001F1F8 IEPL美国-04"
+  - "\U0001F1FA\U0001F1F8 美国-05"
+  - "\U0001F1F9\U0001F1FC 台湾-1"
+  - "\U0001F1F9\U0001F1FC IEPL台湾-2"
+  - "\U0001F1F9\U0001F1FC 台湾-3"
+  - "\U0001F1F9\U0001F1FC IEPL台湾-4"
+  - "\U0001F1F0\U0001F1F7 韩国-01"
+  - "\U0001F1F0\U0001F1F7 韩国-02"
+  - "\U0001F1F0\U0001F1F7 韩国-03"
+  - "\U0001F1EE\U0001F1F3 印度-2"
+  - "\U0001F1F2\U0001F1FE 马来西亚"
+  - "\U0001F1F3\U0001F1F1 荷兰"
+  - "\U0001F1EC\U0001F1E7 英国"
+  - "\U0001F1EA\U0001F1F8 西班牙"
+  - "\U0001F1F5\U0001F1ED 菲律宾"
+  - "\U0001F1E6\U0001F1F7 阿根廷"
+  - "\U0001F1F9\U0001F1F7 土耳其"
+  - "\U0001F1FB\U0001F1F3 越南"
+  - "\U0001F1FA\U0001F1E6 乌克兰"
+  - "\U0001F1F7\U0001F1FA 俄罗斯"
+  - "\U0001F1EB\U0001F1F7 法国"
+  - "\U0001F1E9\U0001F1EA 德国"
+  - "\U0001F1EE\U0001F1F9 意大利"
+  - "\U0001F1F9\U0001F1ED 泰国"
+  - "\U0001F1EE\U0001F1F3 印度-1"
+  - "\U0001F1E6\U0001F1EA 迪拜"
+  - "\U0001F1E6\U0001F1FA 澳大利亚"
+  - "\U0001F1EE\U0001F1E9 印度尼西亚"
+  - "\U0001F1EE\U0001F1EA 爱尔兰"
+  - "\U0001F1F2\U0001F1FD 墨西哥"
+  - "\U0001F1E8\U0001F1E6 加拿大"
+- name: 自动选择
+  type: url-test
+  proxies:
+  - 极速666.com
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKT1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKT2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKB"
+  - "\U0001F1ED\U0001F1F0 香港_A1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A3"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A4"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A5"
+  - "\U0001F1ED\U0001F1F0 香港_B1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B3"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B4"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B5"
+  - "\U0001F1ED\U0001F1F0 香港_01"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_02"
+  - "\U0001F1ED\U0001F1F0 香港_03"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-04"
+  - "\U0001F1ED\U0001F1F0 香港-05"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-06"
+  - "\U0001F1ED\U0001F1F0 香港-07"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-08"
+  - "\U0001F1ED\U0001F1F0 香港_09"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_10"
+  - "\U0001F1EF\U0001F1F5 日本-01"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-02"
+  - "\U0001F1EF\U0001F1F5 日本-03"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-04"
+  - "\U0001F1EF\U0001F1F5 日本-05"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-06"
+  - "\U0001F1EF\U0001F1F5 日本-07"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-08"
+  - "\U0001F1EF\U0001F1F5 日本-09"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-10"
+  - "\U0001F1EF\U0001F1F5 日本-11"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-12"
+  - "\U0001F1EF\U0001F1F5 日本-13"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-14"
+  - "\U0001F1EF\U0001F1F5 日本-15"
+  - "\U0001F1F8\U0001F1EC 新加坡-1"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-2"
+  - "\U0001F1F8\U0001F1EC 新加坡-3"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-4"
+  - "\U0001F1F8\U0001F1EC 新加坡-5"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-6"
+  - "\U0001F1F8\U0001F1EC 新加坡-7"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-8"
+  - "\U0001F1F8\U0001F1EC 新加坡-9"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-10"
+  - "\U0001F1F8\U0001F1EC 新加坡-11"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-12"
+  - "\U0001F1F8\U0001F1EC 新加坡-13"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-14"
+  - "\U0001F1F8\U0001F1EC 新加坡-15"
+  - "\U0001F1FA\U0001F1F8 美国-01"
+  - "\U0001F1FA\U0001F1F8 IEPL美国-02"
+  - "\U0001F1FA\U0001F1F8 美国-03"
+  - "\U0001F1FA\U0001F1F8 IEPL美国-04"
+  - "\U0001F1FA\U0001F1F8 美国-05"
+  - "\U0001F1F9\U0001F1FC 台湾-1"
+  - "\U0001F1F9\U0001F1FC IEPL台湾-2"
+  - "\U0001F1F9\U0001F1FC 台湾-3"
+  - "\U0001F1F9\U0001F1FC IEPL台湾-4"
+  - "\U0001F1F0\U0001F1F7 韩国-01"
+  - "\U0001F1F0\U0001F1F7 韩国-02"
+  - "\U0001F1F0\U0001F1F7 韩国-03"
+  - "\U0001F1EE\U0001F1F3 印度-2"
+  - "\U0001F1F2\U0001F1FE 马来西亚"
+  - "\U0001F1F3\U0001F1F1 荷兰"
+  - "\U0001F1EC\U0001F1E7 英国"
+  - "\U0001F1EA\U0001F1F8 西班牙"
+  - "\U0001F1F5\U0001F1ED 菲律宾"
+  - "\U0001F1E6\U0001F1F7 阿根廷"
+  - "\U0001F1F9\U0001F1F7 土耳其"
+  - "\U0001F1FB\U0001F1F3 越南"
+  - "\U0001F1FA\U0001F1E6 乌克兰"
+  - "\U0001F1F7\U0001F1FA 俄罗斯"
+  - "\U0001F1EB\U0001F1F7 法国"
+  - "\U0001F1E9\U0001F1EA 德国"
+  - "\U0001F1EE\U0001F1F9 意大利"
+  - "\U0001F1F9\U0001F1ED 泰国"
+  - "\U0001F1EE\U0001F1F3 印度-1"
+  - "\U0001F1E6\U0001F1EA 迪拜"
+  - "\U0001F1E6\U0001F1FA 澳大利亚"
+  - "\U0001F1EE\U0001F1E9 印度尼西亚"
+  - "\U0001F1EE\U0001F1EA 爱尔兰"
+  - "\U0001F1F2\U0001F1FD 墨西哥"
+  - "\U0001F1E8\U0001F1E6 加拿大"
+  url: http://www.gstatic.com/generate_204
+  interval: 86400
+- name: 故障转移
+  type: fallback
+  proxies:
+  - 极速666.com
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKT1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKT2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港HKB"
+  - "\U0001F1ED\U0001F1F0 香港_A1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A3"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A4"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_A5"
+  - "\U0001F1ED\U0001F1F0 香港_B1"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B2"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B3"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B4"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_B5"
+  - "\U0001F1ED\U0001F1F0 香港_01"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_02"
+  - "\U0001F1ED\U0001F1F0 香港_03"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-04"
+  - "\U0001F1ED\U0001F1F0 香港-05"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-06"
+  - "\U0001F1ED\U0001F1F0 香港-07"
+  - "\U0001F1ED\U0001F1F0 IEPL香港-08"
+  - "\U0001F1ED\U0001F1F0 香港_09"
+  - "\U0001F1ED\U0001F1F0 IEPL香港_10"
+  - "\U0001F1EF\U0001F1F5 日本-01"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-02"
+  - "\U0001F1EF\U0001F1F5 日本-03"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-04"
+  - "\U0001F1EF\U0001F1F5 日本-05"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-06"
+  - "\U0001F1EF\U0001F1F5 日本-07"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-08"
+  - "\U0001F1EF\U0001F1F5 日本-09"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-10"
+  - "\U0001F1EF\U0001F1F5 日本-11"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-12"
+  - "\U0001F1EF\U0001F1F5 日本-13"
+  - "\U0001F1EF\U0001F1F5 IEPL日本-14"
+  - "\U0001F1EF\U0001F1F5 日本-15"
+  - "\U0001F1F8\U0001F1EC 新加坡-1"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-2"
+  - "\U0001F1F8\U0001F1EC 新加坡-3"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-4"
+  - "\U0001F1F8\U0001F1EC 新加坡-5"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-6"
+  - "\U0001F1F8\U0001F1EC 新加坡-7"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-8"
+  - "\U0001F1F8\U0001F1EC 新加坡-9"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-10"
+  - "\U0001F1F8\U0001F1EC 新加坡-11"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-12"
+  - "\U0001F1F8\U0001F1EC 新加坡-13"
+  - "\U0001F1F8\U0001F1EC IEPL新加坡-14"
+  - "\U0001F1F8\U0001F1EC 新加坡-15"
+  - "\U0001F1FA\U0001F1F8 美国-01"
+  - "\U0001F1FA\U0001F1F8 IEPL美国-02"
+  - "\U0001F1FA\U0001F1F8 美国-03"
+  - "\U0001F1FA\U0001F1F8 IEPL美国-04"
+  - "\U0001F1FA\U0001F1F8 美国-05"
+  - "\U0001F1F9\U0001F1FC 台湾-1"
+  - "\U0001F1F9\U0001F1FC IEPL台湾-2"
+  - "\U0001F1F9\U0001F1FC 台湾-3"
+  - "\U0001F1F9\U0001F1FC IEPL台湾-4"
+  - "\U0001F1F0\U0001F1F7 韩国-01"
+  - "\U0001F1F0\U0001F1F7 韩国-02"
+  - "\U0001F1F0\U0001F1F7 韩国-03"
+  - "\U0001F1EE\U0001F1F3 印度-2"
+  - "\U0001F1F2\U0001F1FE 马来西亚"
+  - "\U0001F1F3\U0001F1F1 荷兰"
+  - "\U0001F1EC\U0001F1E7 英国"
+  - "\U0001F1EA\U0001F1F8 西班牙"
+  - "\U0001F1F5\U0001F1ED 菲律宾"
+  - "\U0001F1E6\U0001F1F7 阿根廷"
+  - "\U0001F1F9\U0001F1F7 土耳其"
+  - "\U0001F1FB\U0001F1F3 越南"
+  - "\U0001F1FA\U0001F1E6 乌克兰"
+  - "\U0001F1F7\U0001F1FA 俄罗斯"
+  - "\U0001F1EB\U0001F1F7 法国"
+  - "\U0001F1E9\U0001F1EA 德国"
+  - "\U0001F1EE\U0001F1F9 意大利"
+  - "\U0001F1F9\U0001F1ED 泰国"
+  - "\U0001F1EE\U0001F1F3 印度-1"
+  - "\U0001F1E6\U0001F1EA 迪拜"
+  - "\U0001F1E6\U0001F1FA 澳大利亚"
+  - "\U0001F1EE\U0001F1E9 印度尼西亚"
+  - "\U0001F1EE\U0001F1EA 爱尔兰"
+  - "\U0001F1F2\U0001F1FD 墨西哥"
+  - "\U0001F1E8\U0001F1E6 加拿大"
+  url: http://www.gstatic.com/generate_204
+  interval: 7200
+rules:
+- DOMAIN-SUFFIX,services.googleapis.cn,极速云
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,极速云
+- DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+- DOMAIN,safebrowsing.googleapis.com,DIRECT
+- DOMAIN,developer.apple.com,极速云
+- DOMAIN-SUFFIX,digicert.com,极速云
+- DOMAIN,ocsp.apple.com,极速云
+- DOMAIN,ocsp.comodoca.com,极速云
+- DOMAIN,ocsp.usertrust.com,极速云
+- DOMAIN,ocsp.sectigo.com,极速云
+- DOMAIN,ocsp.verisign.net,极速云
+- DOMAIN-SUFFIX,apple-dns.net,极速云
+- DOMAIN,testflight.apple.com,极速云
+- DOMAIN,sandbox.itunes.apple.com,极速云
+- DOMAIN,itunes.apple.com,极速云
+- DOMAIN-SUFFIX,apps.apple.com,极速云
+- DOMAIN-SUFFIX,blobstore.apple.com,极速云
+- DOMAIN,cvws.icloud-content.com,极速云
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,cdn20.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+- DOMAIN-SUFFIX,edgekey.net,DIRECT
+- DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+- DOMAIN-SUFFIX,mwcname.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+- DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+- DOMAIN-SUFFIX,126.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,36kr.com,DIRECT
+- DOMAIN-SUFFIX,acfun.tv,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-KEYWORD,alicdn,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,bilivideo.com,DIRECT
+- DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+- DOMAIN-SUFFIX,clouddn.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+- DOMAIN-SUFFIX,cootekservice.com,DIRECT
+- DOMAIN-SUFFIX,csdn.net,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,dgtle.com,DIRECT
+- DOMAIN-SUFFIX,dianping.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,easou.com,DIRECT
+- DOMAIN-SUFFIX,ele.me,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fir.im,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,g-cores.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN,cdn.hockeyapp.net,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hxcdn.net,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,ifengimg.com,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jianshu.com,DIRECT
+- DOMAIN-SUFFIX,knewone.com,DIRECT
+- DOMAIN-SUFFIX,le.com,DIRECT
+- DOMAIN-SUFFIX,lecloud.com,DIRECT
+- DOMAIN-SUFFIX,lemicp.com,DIRECT
+- DOMAIN-SUFFIX,licdn.com,DIRECT
+- DOMAIN-SUFFIX,luoo.net,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,mi.com,DIRECT
+- DOMAIN-SUFFIX,miaopai.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mob.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,office.com,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-KEYWORD,officecdn,DIRECT
+- DOMAIN-SUFFIX,oschina.net,DIRECT
+- DOMAIN-SUFFIX,ppsimg.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,qcloud.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qdmm.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qhres.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qihucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiniu.com,DIRECT
+- DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiyipic.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,qqurl.com,DIRECT
+- DOMAIN-SUFFIX,rarbg.to,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,segmentfault.com,DIRECT
+- DOMAIN-SUFFIX,sinaapp.com,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,snapdrop.net,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,speedtest.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,tencent.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,tianyancha.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,umetrip.com,DIRECT
+- DOMAIN-SUFFIX,upaiyun.com,DIRECT
+- DOMAIN-SUFFIX,upyun.com,DIRECT
+- DOMAIN-SUFFIX,veryzhun.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,yhd.com,DIRECT
+- DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+- DOMAIN-SUFFIX,yinxiang.com,DIRECT
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,youdao.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zealer.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+- DOMAIN-SUFFIX,zoho.com,DIRECT
+- DOMAIN-KEYWORD,amazon,极速云
+- DOMAIN-KEYWORD,google,极速云
+- DOMAIN-KEYWORD,gmail,极速云
+- DOMAIN-KEYWORD,youtube,极速云
+- DOMAIN-KEYWORD,facebook,极速云
+- DOMAIN-SUFFIX,fb.me,极速云
+- DOMAIN-SUFFIX,fbcdn.net,极速云
+- DOMAIN-KEYWORD,twitter,极速云
+- DOMAIN-KEYWORD,instagram,极速云
+- DOMAIN-KEYWORD,dropbox,极速云
+- DOMAIN-SUFFIX,twimg.com,极速云
+- DOMAIN-KEYWORD,blogspot,极速云
+- DOMAIN-SUFFIX,youtu.be,极速云
+- DOMAIN-KEYWORD,whatsapp,极速云
+- DOMAIN-KEYWORD,admarvel,REJECT
+- DOMAIN-KEYWORD,admaster,REJECT
+- DOMAIN-KEYWORD,adsage,REJECT
+- DOMAIN-KEYWORD,adsmogo,REJECT
+- DOMAIN-KEYWORD,adsrvmedia,REJECT
+- DOMAIN-KEYWORD,adwords,REJECT
+- DOMAIN-KEYWORD,adservice,REJECT
+- DOMAIN-SUFFIX,appsflyer.com,REJECT
+- DOMAIN-KEYWORD,domob,REJECT
+- DOMAIN-SUFFIX,doubleclick.net,REJECT
+- DOMAIN-KEYWORD,duomeng,REJECT
+- DOMAIN-KEYWORD,dwtrack,REJECT
+- DOMAIN-KEYWORD,guanggao,REJECT
+- DOMAIN-KEYWORD,lianmeng,REJECT
+- DOMAIN-SUFFIX,mmstat.com,REJECT
+- DOMAIN-KEYWORD,mopub,REJECT
+- DOMAIN-KEYWORD,omgmta,REJECT
+- DOMAIN-KEYWORD,openx,REJECT
+- DOMAIN-KEYWORD,partnerad,REJECT
+- DOMAIN-KEYWORD,pingfore,REJECT
+- DOMAIN-KEYWORD,supersonicads,REJECT
+- DOMAIN-KEYWORD,uedas,REJECT
+- DOMAIN-KEYWORD,umeng,REJECT
+- DOMAIN-KEYWORD,usage,REJECT
+- DOMAIN-SUFFIX,vungle.com,REJECT
+- DOMAIN-KEYWORD,wlmonitor,REJECT
+- DOMAIN-KEYWORD,zjtoolbar,REJECT
+- DOMAIN-SUFFIX,9to5mac.com,极速云
+- DOMAIN-SUFFIX,abpchina.org,极速云
+- DOMAIN-SUFFIX,adblockplus.org,极速云
+- DOMAIN-SUFFIX,adobe.com,极速云
+- DOMAIN-SUFFIX,akamaized.net,极速云
+- DOMAIN-SUFFIX,alfredapp.com,极速云
+- DOMAIN-SUFFIX,amplitude.com,极速云
+- DOMAIN-SUFFIX,ampproject.org,极速云
+- DOMAIN-SUFFIX,android.com,极速云
+- DOMAIN-SUFFIX,angularjs.org,极速云
+- DOMAIN-SUFFIX,aolcdn.com,极速云
+- DOMAIN-SUFFIX,apkpure.com,极速云
+- DOMAIN-SUFFIX,appledaily.com,极速云
+- DOMAIN-SUFFIX,appshopper.com,极速云
+- DOMAIN-SUFFIX,appspot.com,极速云
+- DOMAIN-SUFFIX,arcgis.com,极速云
+- DOMAIN-SUFFIX,archive.org,极速云
+- DOMAIN-SUFFIX,armorgames.com,极速云
+- DOMAIN-SUFFIX,aspnetcdn.com,极速云
+- DOMAIN-SUFFIX,att.com,极速云
+- DOMAIN-SUFFIX,awsstatic.com,极速云
+- DOMAIN-SUFFIX,azureedge.net,极速云
+- DOMAIN-SUFFIX,azurewebsites.net,极速云
+- DOMAIN-SUFFIX,bing.com,极速云
+- DOMAIN-SUFFIX,bintray.com,极速云
+- DOMAIN-SUFFIX,bit.com,极速云
+- DOMAIN-SUFFIX,bit.ly,极速云
+- DOMAIN-SUFFIX,bitbucket.org,极速云
+- DOMAIN-SUFFIX,bjango.com,极速云
+- DOMAIN-SUFFIX,bkrtx.com,极速云
+- DOMAIN-SUFFIX,blog.com,极速云
+- DOMAIN-SUFFIX,blogcdn.com,极速云
+- DOMAIN-SUFFIX,blogger.com,极速云
+- DOMAIN-SUFFIX,blogsmithmedia.com,极速云
+- DOMAIN-SUFFIX,blogspot.com,极速云
+- DOMAIN-SUFFIX,blogspot.hk,极速云
+- DOMAIN-SUFFIX,bloomberg.com,极速云
+- DOMAIN-SUFFIX,box.com,极速云
+- DOMAIN-SUFFIX,box.net,极速云
+- DOMAIN-SUFFIX,cachefly.net,极速云
+- DOMAIN-SUFFIX,chromium.org,极速云
+- DOMAIN-SUFFIX,cl.ly,极速云
+- DOMAIN-SUFFIX,cloudflare.com,极速云
+- DOMAIN-SUFFIX,cloudfront.net,极速云
+- DOMAIN-SUFFIX,cloudmagic.com,极速云
+- DOMAIN-SUFFIX,cmail19.com,极速云
+- DOMAIN-SUFFIX,cnet.com,极速云
+- DOMAIN-SUFFIX,cocoapods.org,极速云
+- DOMAIN-SUFFIX,comodoca.com,极速云
+- DOMAIN-SUFFIX,crashlytics.com,极速云
+- DOMAIN-SUFFIX,culturedcode.com,极速云
+- DOMAIN-SUFFIX,d.pr,极速云
+- DOMAIN-SUFFIX,danilo.to,极速云
+- DOMAIN-SUFFIX,dayone.me,极速云
+- DOMAIN-SUFFIX,db.tt,极速云
+- DOMAIN-SUFFIX,deskconnect.com,极速云
+- DOMAIN-SUFFIX,disq.us,极速云
+- DOMAIN-SUFFIX,disqus.com,极速云
+- DOMAIN-SUFFIX,disquscdn.com,极速云
+- DOMAIN-SUFFIX,dnsimple.com,极速云
+- DOMAIN-SUFFIX,docker.com,极速云
+- DOMAIN-SUFFIX,dribbble.com,极速云
+- DOMAIN-SUFFIX,droplr.com,极速云
+- DOMAIN-SUFFIX,duckduckgo.com,极速云
+- DOMAIN-SUFFIX,dueapp.com,极速云
+- DOMAIN-SUFFIX,dytt8.net,极速云
+- DOMAIN-SUFFIX,edgecastcdn.net,极速云
+- DOMAIN-SUFFIX,edgekey.net,极速云
+- DOMAIN-SUFFIX,edgesuite.net,极速云
+- DOMAIN-SUFFIX,engadget.com,极速云
+- DOMAIN-SUFFIX,entrust.net,极速云
+- DOMAIN-SUFFIX,eurekavpt.com,极速云
+- DOMAIN-SUFFIX,evernote.com,极速云
+- DOMAIN-SUFFIX,fabric.io,极速云
+- DOMAIN-SUFFIX,fast.com,极速云
+- DOMAIN-SUFFIX,fastly.net,极速云
+- DOMAIN-SUFFIX,fc2.com,极速云
+- DOMAIN-SUFFIX,feedburner.com,极速云
+- DOMAIN-SUFFIX,feedly.com,极速云
+- DOMAIN-SUFFIX,feedsportal.com,极速云
+- DOMAIN-SUFFIX,fiftythree.com,极速云
+- DOMAIN-SUFFIX,firebaseio.com,极速云
+- DOMAIN-SUFFIX,flexibits.com,极速云
+- DOMAIN-SUFFIX,flickr.com,极速云
+- DOMAIN-SUFFIX,flipboard.com,极速云
+- DOMAIN-SUFFIX,g.co,极速云
+- DOMAIN-SUFFIX,gabia.net,极速云
+- DOMAIN-SUFFIX,geni.us,极速云
+- DOMAIN-SUFFIX,gfx.ms,极速云
+- DOMAIN-SUFFIX,ggpht.com,极速云
+- DOMAIN-SUFFIX,ghostnoteapp.com,极速云
+- DOMAIN-SUFFIX,git.io,极速云
+- DOMAIN-KEYWORD,github,极速云
+- DOMAIN-SUFFIX,globalsign.com,极速云
+- DOMAIN-SUFFIX,gmodules.com,极速云
+- DOMAIN-SUFFIX,godaddy.com,极速云
+- DOMAIN-SUFFIX,golang.org,极速云
+- DOMAIN-SUFFIX,gongm.in,极速云
+- DOMAIN-SUFFIX,goo.gl,极速云
+- DOMAIN-SUFFIX,goodreaders.com,极速云
+- DOMAIN-SUFFIX,goodreads.com,极速云
+- DOMAIN-SUFFIX,gravatar.com,极速云
+- DOMAIN-SUFFIX,gstatic.com,极速云
+- DOMAIN-SUFFIX,gvt0.com,极速云
+- DOMAIN-SUFFIX,hockeyapp.net,极速云
+- DOMAIN-SUFFIX,hotmail.com,极速云
+- DOMAIN-SUFFIX,icons8.com,极速云
+- DOMAIN-SUFFIX,ifixit.com,极速云
+- DOMAIN-SUFFIX,ift.tt,极速云
+- DOMAIN-SUFFIX,ifttt.com,极速云
+- DOMAIN-SUFFIX,iherb.com,极速云
+- DOMAIN-SUFFIX,imageshack.us,极速云
+- DOMAIN-SUFFIX,img.ly,极速云
+- DOMAIN-SUFFIX,imgur.com,极速云
+- DOMAIN-SUFFIX,imore.com,极速云
+- DOMAIN-SUFFIX,instapaper.com,极速云
+- DOMAIN-SUFFIX,ipn.li,极速云
+- DOMAIN-SUFFIX,is.gd,极速云
+- DOMAIN-SUFFIX,issuu.com,极速云
+- DOMAIN-SUFFIX,itgonglun.com,极速云
+- DOMAIN-SUFFIX,itun.es,极速云
+- DOMAIN-SUFFIX,ixquick.com,极速云
+- DOMAIN-SUFFIX,j.mp,极速云
+- DOMAIN-SUFFIX,js.revsci.net,极速云
+- DOMAIN-SUFFIX,jshint.com,极速云
+- DOMAIN-SUFFIX,jtvnw.net,极速云
+- DOMAIN-SUFFIX,justgetflux.com,极速云
+- DOMAIN-SUFFIX,kat.cr,极速云
+- DOMAIN-SUFFIX,klip.me,极速云
+- DOMAIN-SUFFIX,libsyn.com,极速云
+- DOMAIN-SUFFIX,linkedin.com,极速云
+- DOMAIN-SUFFIX,line-apps.com,极速云
+- DOMAIN-SUFFIX,linode.com,极速云
+- DOMAIN-SUFFIX,lithium.com,极速云
+- DOMAIN-SUFFIX,littlehj.com,极速云
+- DOMAIN-SUFFIX,live.com,极速云
+- DOMAIN-SUFFIX,live.net,极速云
+- DOMAIN-SUFFIX,livefilestore.com,极速云
+- DOMAIN-SUFFIX,llnwd.net,极速云
+- DOMAIN-SUFFIX,macid.co,极速云
+- DOMAIN-SUFFIX,macromedia.com,极速云
+- DOMAIN-SUFFIX,macrumors.com,极速云
+- DOMAIN-SUFFIX,mashable.com,极速云
+- DOMAIN-SUFFIX,mathjax.org,极速云
+- DOMAIN-SUFFIX,medium.com,极速云
+- DOMAIN-SUFFIX,mega.co.nz,极速云
+- DOMAIN-SUFFIX,mega.nz,极速云
+- DOMAIN-SUFFIX,megaupload.com,极速云
+- DOMAIN-SUFFIX,microsofttranslator.com,极速云
+- DOMAIN-SUFFIX,mindnode.com,极速云
+- DOMAIN-SUFFIX,mobile01.com,极速云
+- DOMAIN-SUFFIX,modmyi.com,极速云
+- DOMAIN-SUFFIX,msedge.net,极速云
+- DOMAIN-SUFFIX,myfontastic.com,极速云
+- DOMAIN-SUFFIX,name.com,极速云
+- DOMAIN-SUFFIX,nextmedia.com,极速云
+- DOMAIN-SUFFIX,nsstatic.net,极速云
+- DOMAIN-SUFFIX,nssurge.com,极速云
+- DOMAIN-SUFFIX,nyt.com,极速云
+- DOMAIN-SUFFIX,nytimes.com,极速云
+- DOMAIN-SUFFIX,omnigroup.com,极速云
+- DOMAIN-SUFFIX,onedrive.com,极速云
+- DOMAIN-SUFFIX,onenote.com,极速云
+- DOMAIN-SUFFIX,ooyala.com,极速云
+- DOMAIN-SUFFIX,openvpn.net,极速云
+- DOMAIN-SUFFIX,openwrt.org,极速云
+- DOMAIN-SUFFIX,orkut.com,极速云
+- DOMAIN-SUFFIX,osxdaily.com,极速云
+- DOMAIN-SUFFIX,outlook.com,极速云
+- DOMAIN-SUFFIX,ow.ly,极速云
+- DOMAIN-SUFFIX,paddleapi.com,极速云
+- DOMAIN-SUFFIX,parallels.com,极速云
+- DOMAIN-SUFFIX,parse.com,极速云
+- DOMAIN-SUFFIX,pdfexpert.com,极速云
+- DOMAIN-SUFFIX,periscope.tv,极速云
+- DOMAIN-SUFFIX,pinboard.in,极速云
+- DOMAIN-SUFFIX,pinterest.com,极速云
+- DOMAIN-SUFFIX,pixelmator.com,极速云
+- DOMAIN-SUFFIX,pixiv.net,极速云
+- DOMAIN-SUFFIX,playpcesor.com,极速云
+- DOMAIN-SUFFIX,playstation.com,极速云
+- DOMAIN-SUFFIX,playstation.com.hk,极速云
+- DOMAIN-SUFFIX,playstation.net,极速云
+- DOMAIN-SUFFIX,playstationnetwork.com,极速云
+- DOMAIN-SUFFIX,pushwoosh.com,极速云
+- DOMAIN-SUFFIX,rime.im,极速云
+- DOMAIN-SUFFIX,servebom.com,极速云
+- DOMAIN-SUFFIX,sfx.ms,极速云
+- DOMAIN-SUFFIX,shadowsocks.org,极速云
+- DOMAIN-SUFFIX,sharethis.com,极速云
+- DOMAIN-SUFFIX,shazam.com,极速云
+- DOMAIN-SUFFIX,skype.com,极速云
+- DOMAIN-SUFFIX,smartdns极速云.com,极速云
+- DOMAIN-SUFFIX,smartmailcloud.com,极速云
+- DOMAIN-SUFFIX,sndcdn.com,极速云
+- DOMAIN-SUFFIX,sony.com,极速云
+- DOMAIN-SUFFIX,soundcloud.com,极速云
+- DOMAIN-SUFFIX,sourceforge.net,极速云
+- DOMAIN-SUFFIX,spotify.com,极速云
+- DOMAIN-SUFFIX,squarespace.com,极速云
+- DOMAIN-SUFFIX,sstatic.net,极速云
+- DOMAIN-SUFFIX,st.luluku.pw,极速云
+- DOMAIN-SUFFIX,stackoverflow.com,极速云
+- DOMAIN-SUFFIX,startpage.com,极速云
+- DOMAIN-SUFFIX,staticflickr.com,极速云
+- DOMAIN-SUFFIX,steamcommunity.com,极速云
+- DOMAIN-SUFFIX,symauth.com,极速云
+- DOMAIN-SUFFIX,symcb.com,极速云
+- DOMAIN-SUFFIX,symcd.com,极速云
+- DOMAIN-SUFFIX,tapbots.com,极速云
+- DOMAIN-SUFFIX,tapbots.net,极速云
+- DOMAIN-SUFFIX,tdesktop.com,极速云
+- DOMAIN-SUFFIX,techcrunch.com,极速云
+- DOMAIN-SUFFIX,techsmith.com,极速云
+- DOMAIN-SUFFIX,thepiratebay.org,极速云
+- DOMAIN-SUFFIX,theverge.com,极速云
+- DOMAIN-SUFFIX,time.com,极速云
+- DOMAIN-SUFFIX,timeinc.net,极速云
+- DOMAIN-SUFFIX,tiny.cc,极速云
+- DOMAIN-SUFFIX,tinypic.com,极速云
+- DOMAIN-SUFFIX,tmblr.co,极速云
+- DOMAIN-SUFFIX,todoist.com,极速云
+- DOMAIN-SUFFIX,trello.com,极速云
+- DOMAIN-SUFFIX,trustasiassl.com,极速云
+- DOMAIN-SUFFIX,tumblr.co,极速云
+- DOMAIN-SUFFIX,tumblr.com,极速云
+- DOMAIN-SUFFIX,tweetdeck.com,极速云
+- DOMAIN-SUFFIX,tweetmarker.net,极速云
+- DOMAIN-SUFFIX,twitch.tv,极速云
+- DOMAIN-SUFFIX,txmblr.com,极速云
+- DOMAIN-SUFFIX,typekit.net,极速云
+- DOMAIN-SUFFIX,ubertags.com,极速云
+- DOMAIN-SUFFIX,ublock.org,极速云
+- DOMAIN-SUFFIX,ubnt.com,极速云
+- DOMAIN-SUFFIX,ulyssesapp.com,极速云
+- DOMAIN-SUFFIX,urchin.com,极速云
+- DOMAIN-SUFFIX,usertrust.com,极速云
+- DOMAIN-SUFFIX,v.gd,极速云
+- DOMAIN-SUFFIX,v2ex.com,极速云
+- DOMAIN-SUFFIX,vimeo.com,极速云
+- DOMAIN-SUFFIX,vimeocdn.com,极速云
+- DOMAIN-SUFFIX,vine.co,极速云
+- DOMAIN-SUFFIX,vivaldi.com,极速云
+- DOMAIN-SUFFIX,vox-cdn.com,极速云
+- DOMAIN-SUFFIX,vsco.co,极速云
+- DOMAIN-SUFFIX,vultr.com,极速云
+- DOMAIN-SUFFIX,w.org,极速云
+- DOMAIN-SUFFIX,w3schools.com,极速云
+- DOMAIN-SUFFIX,webtype.com,极速云
+- DOMAIN-SUFFIX,wikiwand.com,极速云
+- DOMAIN-SUFFIX,wikileaks.org,极速云
+- DOMAIN-SUFFIX,wikimedia.org,极速云
+- DOMAIN-SUFFIX,wikipedia.com,极速云
+- DOMAIN-SUFFIX,wikipedia.org,极速云
+- DOMAIN-SUFFIX,windows.com,极速云
+- DOMAIN-SUFFIX,windows.net,极速云
+- DOMAIN-SUFFIX,wire.com,极速云
+- DOMAIN-SUFFIX,wordpress.com,极速云
+- DOMAIN-SUFFIX,workflowy.com,极速云
+- DOMAIN-SUFFIX,wp.com,极速云
+- DOMAIN-SUFFIX,wsj.com,极速云
+- DOMAIN-SUFFIX,wsj.net,极速云
+- DOMAIN-SUFFIX,xda-developers.com,极速云
+- DOMAIN-SUFFIX,xeeno.com,极速云
+- DOMAIN-SUFFIX,xiti.com,极速云
+- DOMAIN-SUFFIX,yahoo.com,极速云
+- DOMAIN-SUFFIX,yimg.com,极速云
+- DOMAIN-SUFFIX,ying.com,极速云
+- DOMAIN-SUFFIX,yoyo.org,极速云
+- DOMAIN-SUFFIX,ytimg.com,极速云
+- DOMAIN-SUFFIX,telegra.ph,极速云
+- DOMAIN-SUFFIX,telegram.org,极速云
+- IP-CIDR,91.108.4.0/22,极速云,no-resolve
+- IP-CIDR,91.108.8.0/21,极速云,no-resolve
+- IP-CIDR,91.108.16.0/22,极速云,no-resolve
+- IP-CIDR,91.108.56.0/22,极速云,no-resolve
+- IP-CIDR,149.154.160.0/20,极速云,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,极速云,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,极速云,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,极速云,no-resolve
+- IP-CIDR,120.232.181.162/32,极速云,no-resolve
+- IP-CIDR,120.241.147.226/32,极速云,no-resolve
+- IP-CIDR,120.253.253.226/32,极速云,no-resolve
+- IP-CIDR,120.253.255.162/32,极速云,no-resolve
+- IP-CIDR,120.253.255.34/32,极速云,no-resolve
+- IP-CIDR,120.253.255.98/32,极速云,no-resolve
+- IP-CIDR,180.163.150.162/32,极速云,no-resolve
+- IP-CIDR,180.163.150.34/32,极速云,no-resolve
+- IP-CIDR,180.163.151.162/32,极速云,no-resolve
+- IP-CIDR,180.163.151.34/32,极速云,no-resolve
+- IP-CIDR,203.208.39.0/24,极速云,no-resolve
+- IP-CIDR,203.208.40.0/24,极速云,no-resolve
+- IP-CIDR,203.208.41.0/24,极速云,no-resolve
+- IP-CIDR,203.208.43.0/24,极速云,no-resolve
+- IP-CIDR,203.208.50.0/24,极速云,no-resolve
+- IP-CIDR,220.181.174.162/32,极速云,no-resolve
+- IP-CIDR,220.181.174.226/32,极速云,no-resolve
+- IP-CIDR,220.181.174.34/32,极速云,no-resolve
+- DOMAIN,injections.adguard.org,DIRECT
+- DOMAIN,local.adguard.org,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-KEYWORD,-cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,极速云
